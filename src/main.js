@@ -19,7 +19,7 @@ const store = new Vuex.Store({
   }
 })
 
-new Vue({
+var vm = new Vue({
   render: h => h(App),
   store,
   mounted(){
@@ -27,9 +27,11 @@ new Vue({
     //console.log('App is mounted: ' + this.appName);
     store.commit('increment');
     console.log("Logging Vuex store: Store.state.count===" + store.state.count);
+
   },
   data: {
     appName: 'HelloTutorial',
   }
 }).$mount('#app')
 
+console.log(vm);

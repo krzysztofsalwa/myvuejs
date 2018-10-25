@@ -2,6 +2,8 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 import App from './App.vue'
 
+/* eslint-disable no-console */
+
 Vue.config.productionTip = false
 
 Vue.use(Vuex);

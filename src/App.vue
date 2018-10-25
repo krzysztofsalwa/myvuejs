@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <p> Enter your first name: <input v-model="person.firstName" placeholder="edit me"> </p>
-    <p> Enter your last name: <input v-model="person.lastName" placeholder="edit me"> </p>
+    <p> Enter your surname: <input v-model="person.lastName" placeholder="edit me"> </p>
     <SimpleComponent :first-name="person.firstName" :last-name="person.lastName" :person-data="person"/>
     <button v-on:click="handleButtonClick">Click to increment</button>
     <p>The button above has been clicked {{ counter }} times.</p>

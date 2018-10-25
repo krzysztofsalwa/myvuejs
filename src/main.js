@@ -24,7 +24,7 @@ new Vue({
     //alert('App is mounted: ' + this.appName);
     //console.log('App is mounted: ' + this.appName);
     store.commit('increment');
-    console.log("Store.state.count===" + store.state.count);
+    console.log("Logging store: Store.state.count===" + store.state.count);
   },
   data: {
     appName: 'HelloTutorial',

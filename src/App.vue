@@ -3,7 +3,7 @@
     <p> Enter your first name: <input v-model="person.firstName" placeholder="edit me"> </p>
     <p> Enter your surname: <input v-model="person.lastName" placeholder="edit me"> </p>
     <SimpleComponent :first-name="person.firstName" :last-name="person.lastName" :person-data="person"/>
-    <button v-on:click="handleButtonClick">Click to increment</button>
+    <button v-on:click="handleButtonClick">Please click to increment</button>
     <p>The button above has been clicked {{ counter }} times.</p>
     <button v-on:click="modifyStore">Please click to modify Vuex store</button>
     <p>Store.state.count= {{this.$store.state.count}}</p>

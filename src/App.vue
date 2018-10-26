@@ -5,7 +5,7 @@
     <SimpleComponent :first-name="person.firstName" :last-name="person.lastName" :person-data="person"/>
     <button v-on:click="handleButtonClick">Click to increment</button>
     <p>The button above has been clicked {{ counter }} times.</p>
-    <button v-on:click="modifyStore">Click to modify Vuex store</button>
+    <button v-on:click="modifyStore">Please click to modify Vuex store</button>
     <p>Store.state.count= {{this.$store.state.count}}</p>
 
 

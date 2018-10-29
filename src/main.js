@@ -1,12 +1,15 @@
-import Vue from 'vue'
-import Vuex from 'vuex'
-import App from './App.vue'
+import Vue from 'vue';
+import Vuex from 'vuex';
+import VueRouter from 'vue-router';
+import App from './App.vue';
+import { routes } from './routes';
 
 /* eslint-disable no-console */
 
 Vue.config.productionTip = false
 
 Vue.use(Vuex);
+Vue.use(VueRouter);
 
 const store = new Vuex.Store({
   state: {
@@ -19,17 +22,23 @@ const store = new Vuex.Store({
   }
 })
 
-new Vue({
+const router = new VueRouter({
+  routes
+});
+
+var vm = new Vue({
   render: h => h(App),
   store,
+  router,
   mounted(){
     //alert('App is mounted: ' + this.appName);
     //console.log('App is mounted: ' + this.appName);
     store.commit('increment');
-    console.log("Logging Vuex store: Store.state.count===" + store.state.count);
+    //console.log("Logging Vuex store: Store.state.count===" + store.state.count);
   },
   data: {
     appName: 'HelloTutorial',
   }
 }).$mount('#app')
 
+console.log(vm);

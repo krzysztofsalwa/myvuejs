@@ -3,14 +3,19 @@
     <p> Enter your first name: <input v-model="person.firstName" placeholder="edit me"> </p>
     <p> Enter your surname: <input v-model="person.lastName" placeholder="edit me"> </p>
     <SimpleComponent :first-name="person.firstName" :last-name="person.lastName" :person-data="person"/>
-    <button v-on:click="handleButtonClick">Click to increment</button>
+    <button v-on:click="handleButtonClick">Please click here to increment counter</button>
     <p>The button above has been clicked {{ counter }} times.</p>
-    <button v-on:click="modifyStore">Click to modify Vuex store</button>
+    <button v-on:click="modifyStore">Please click to modify Vuex store</button>
     <p>Store.state.count= {{this.$store.state.count}}</p>
 
 
     <p> TestBind: <input v-bind:value="testbind"> </p>
     <p>{{testbind}}</p>
+    <h1>Routing section below</h1>
+    <hr>
+    <appHeader></appHeader>
+    <router-view></router-view>
+    <hr>
     <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div>
 </template>
@@ -20,6 +25,7 @@
 import axios from 'axios'
 import HelloWorld from './components/HelloWorld.vue'
 import SimpleComponent from './components/SimpleComponent.vue'
+import Header from './components/Header.vue';
 
 const handleButtonClickFunctionName = 'handleButtonClick'
 const modifyStoreFunctionName = 'modifyStore';
@@ -29,6 +35,7 @@ export default {
   components: {
     HelloWorld,
     SimpleComponent,
+    appHeader : Header,
   },
   data: function() {
     return {
@@ -56,8 +63,8 @@ export default {
    axios
      .get('https://api.coindesk.com/v1/bpi/currentprice.json')
      .then(response => (this.info = response))
-    //console.log("Component App is mounted");
-    alert('Remove this alert (App.vue)');
+   console.log("Component App is mounted");
+   alert('Remove this alert (App.vue)');
   },
 }
 </script>

@@ -11,6 +11,11 @@
 
     <p> TestBind: <input v-bind:value="testbind"> </p>
     <p>{{testbind}}</p>
+    <h1>Routing section below</h1>
+    <hr>
+    <appHeader></appHeader>
+    <router-view></router-view>
+    <hr>
     <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div>
 </template>
@@ -20,6 +25,7 @@
 import axios from 'axios'
 import HelloWorld from './components/HelloWorld.vue'
 import SimpleComponent from './components/SimpleComponent.vue'
+import Header from './components/Header.vue';
 
 const handleButtonClickFunctionName = 'handleButtonClick'
 const modifyStoreFunctionName = 'modifyStore';
@@ -29,6 +35,7 @@ export default {
   components: {
     HelloWorld,
     SimpleComponent,
+    appHeader : Header,
   },
   data: function() {
     return {

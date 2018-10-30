@@ -31,7 +31,7 @@ var vm = new Vue({
   store,
   router,
   mounted(){
-    alert('App is mounted: ' + this.appName);
+    //alert('App is mounted: ' + this.appName);
     //console.log('App is mounted: ' + this.appName);
     store.commit('increment');
     //console.log("Logging Vuex store: Store.state.count===" + store.state.count);

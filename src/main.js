@@ -35,7 +35,6 @@ var vm = new Vue({
     //console.log('App is mounted: ' + this.appName);
     store.commit('increment');
     //console.log("Logging Vuex store: Store.state.count===" + store.state.count);
-    console.log("Next change to test merge ");
   },
   data: {
     appName: 'HelloTutorial',

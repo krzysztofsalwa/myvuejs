@@ -64,7 +64,6 @@ export default {
      .get('https://api.coindesk.com/v1/bpi/currentprice.json')
      .then(response => (this.info = response))
    console.log("Component App is mounted");
-   alert('Remove this alert (App.vue)');
   },
 }
 </script>

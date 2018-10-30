@@ -16,6 +16,7 @@
     <appHeader></appHeader>
     <router-view></router-view>
     <hr>
+    <p> TestMergeParagraph </p>
     <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div>
 </template>
